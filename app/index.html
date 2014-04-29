@@ -10,12 +10,20 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css(.tmp) styles/main.css -->
+        <!-- build:css(.tmp) styles/menu.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="bower_components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
+
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+        <script src="bower_components/jquery/jquery.min.js"></script>
+
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -34,47 +42,47 @@
             </div>
 
             <div class="row">
-              <div class="col-md-6">
-                <div class="app_logo"><img src="images/Cloud_Rain_Sun.png"/></div>
-                <div class="app_text">Validation of numerical weather prediction model output with satellite data, through plot visualization of multidimensional data.</div>
+              <div class="col-md-6" data-modal="#uc1">
+                <div class="app_logo"><div><img src="images/Cloud_Rain_Sun.png"/></div></div>
+                <div class="app_text"><p>Validation of numerical weather prediction model output with satellite data, through plot visualization of multidimensional data.</p></div>
               </div>
 
-              <div class="col-md-6">
-                <div class="app_logo"><img src="images/construction.png" style="height:32px; margin:16px;" /></div>
-                <div class="app_text">Data quality control of a meteorological network with satellite data.</div>
+              <div class="col-md-6" data-modal="#uc2">
+                <div class="app_logo"><div style="width:64px;padding-left:16px"><img src="images/construction.png" style="height:32px;" /></div></div>
+                <div class="app_text"><p>Data quality control of a meteorological network with satellite data.</p></div>
               </div>
             </div>
 
              <div class="row">
-              <div class="col-md-6">
-                <div class="app_logo"><img src="images/construction.png" style="height:32px; margin:16px;" /></div>
-                <div class="app_text">Backup system for routinely used Meteorological Workstation</div>
+              <div class="col-md-6" data-modal="#uc3">
+                <div class="app_logo"><div style="width:64px;padding-left:16px"><img src="images/construction.png" style="height:32px;" /></div></div>
+                <div class="app_text"><p>Backup system for routinely used Meteorological Workstation.</p></div>
               </div>
-              <div class="col-md-6">
-                <div class="app_logo"><img src="images/radar_cloud.png"/></div>
-                <div class="app_text">Multidimensional Cloud data Analysis through comparison of radar and satellite data.</div>
-              </div>
-            </div>
-
-             <div class="row">
-              <div class="col-md-6">
-                <div class="app_logo"><img src="images/construction.png"  style="height:32px; margin:16px;" /></div>
-                <div class="app_text">ESA CCI Ozone</div>
-              </div>
-              <div class="col-md-6">
-                <div class="app_logo"><img src="images/snow.png"/></div>
-                <div class="app_text">Multi-temporal correlation of snow maps and model output.</div>
+              <div class="col-md-6" data-modal="#uc4">
+                <div class="app_logo"><div><img src="images/radar_cloud.png"/></div></div>
+                <div class="app_text"><p>Multidimensional Cloud data Analysis through comparison of radar and satellite data.</p></div>
               </div>
             </div>
 
              <div class="row">
-              <div class="col-md-6">
-                <div class="app_logo"><img src="images/snow.png"/></div>
-                <div class="app_text">Snow and Glaciers changes and land-use influence on algorithms.</div>
+              <div class="col-md-6" data-modal="#uc5">
+                <div class="app_logo"><div style="width:64px;padding-left:16px"><img src="images/construction.png"  style="height:32px;" /></div></div>
+                <div class="app_text"><p>ESA CCI Ozone</p></div>
               </div>
-              <div class="col-md-6">
-                <div class="app_logo"><img src="images/vmanip-logo_tut.png"  /></div>
-                <div class="app_text">This Application presents the complete application client selection, manipulation and visualization functionality through a tutorial.</div>
+              <div class="col-md-6" data-modal="#uc6">
+                <div class="app_logo"><div><img src="images/snow.png"/></div></div>
+                <div class="app_text"><p>Multi-temporal correlation of snow maps and model output.</p></div>
+              </div>
+            </div>
+
+             <div class="row">
+              <div class="col-md-6" data-modal="#uc7">
+                <div class="app_logo"><div><img src="images/snow.png"/></div></div>
+                <div class="app_text"><p>Snow and Glaciers changes and land-use influence on algorithms.</p></div>
+              </div>
+              <div class="col-md-6" data-modal="#uc8">
+                <div class="app_logo"><div><img src="images/vmanip-logo_tut.png"  /></div></div>
+                <div class="app_text"><p>This Application presents the complete application client selection, manipulation and visualization functionality through a tutorial.</p></div>
               </div>
             </div>
             
@@ -89,12 +97,12 @@
 
 
             <!-- Modal -->
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id="uc1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Use Case 1 Example</h4>
+                    <h4 class="modal-title" id="myModalLabel1">Use Case 1 Example</h4>
                   </div>
                   <div class="modal-body">
                     <div class="row">
@@ -118,39 +126,281 @@
                   </div>
                   <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Open Application</button>
+                    <a type="button" class="btn btn-primary" href="uc1.html">Open Application</a>
                   </div>
                 </div>
               </div>
             </div>
+            </div>
 
+             <!-- Modal -->
+            <div class="modal fade" id="uc2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel2">Use Case 2 Example</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-4"> <img src="images/EarthCARE_cut.jpg" style="height:auto" class="img-responsive"/> </div>
+                      <div class="col-md-8">
+                        <p>Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy 
+                        lies a small unregarded yellow sun. </p>
+                        <p>Orbiting this at a distance of roughly ninety-two million miles is an utterly insignificant little blue green 
+                        planet whose ape-descended life forms are so amazingly primitive that they still think digital watches are a 
+                        pretty neat idea. </p>
+                        <p>This planet has - or rather had - a problem, which was this: most of the people on it were unhappy for 
+                        pretty much of the time. Many solutions were suggested for this problem, but most of these were largely 
+                        concerned with the movements of small green pieces of paper, which is odd because on the whole it wasn't 
+                        the small green pieces of paper that were unhappy. 
+                        And so the problem remained; lots of the people were mean, and most of them were miserable, even the 
+                        ones with digital watches. </p>
+                        <p>Many were increasingly of the opinion that they'd all made a big mistake in coming down from the trees 
+                        in the first place. And some said that even the trees had been a bad move, and that no one should ever have 
+                        left the oceans.</p>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a type="button" class="btn btn-primary" href="uc2.html">Open Application</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="uc3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel3" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel3">Use Case 3 Example</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-4"> <img src="images/EarthCARE_cut.jpg" style="height:auto" class="img-responsive"/> </div>
+                      <div class="col-md-8">
+                        <p>Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy 
+                        lies a small unregarded yellow sun. </p>
+                        <p>Orbiting this at a distance of roughly ninety-two million miles is an utterly insignificant little blue green 
+                        planet whose ape-descended life forms are so amazingly primitive that they still think digital watches are a 
+                        pretty neat idea. </p>
+                        <p>This planet has - or rather had - a problem, which was this: most of the people on it were unhappy for 
+                        pretty much of the time. Many solutions were suggested for this problem, but most of these were largely 
+                        concerned with the movements of small green pieces of paper, which is odd because on the whole it wasn't 
+                        the small green pieces of paper that were unhappy. 
+                        And so the problem remained; lots of the people were mean, and most of them were miserable, even the 
+                        ones with digital watches. </p>
+                        <p>Many were increasingly of the opinion that they'd all made a big mistake in coming down from the trees 
+                        in the first place. And some said that even the trees had been a bad move, and that no one should ever have 
+                        left the oceans.</p>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a type="button" class="btn btn-primary" href="uc3.html">Open Application</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="uc4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel4" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel4">Use Case 4 Example</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-4"> <img src="images/EarthCARE_cut.jpg" style="height:auto" class="img-responsive"/> </div>
+                      <div class="col-md-8">
+                        <p>Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy 
+                        lies a small unregarded yellow sun. </p>
+                        <p>Orbiting this at a distance of roughly ninety-two million miles is an utterly insignificant little blue green 
+                        planet whose ape-descended life forms are so amazingly primitive that they still think digital watches are a 
+                        pretty neat idea. </p>
+                        <p>This planet has - or rather had - a problem, which was this: most of the people on it were unhappy for 
+                        pretty much of the time. Many solutions were suggested for this problem, but most of these were largely 
+                        concerned with the movements of small green pieces of paper, which is odd because on the whole it wasn't 
+                        the small green pieces of paper that were unhappy. 
+                        And so the problem remained; lots of the people were mean, and most of them were miserable, even the 
+                        ones with digital watches. </p>
+                        <p>Many were increasingly of the opinion that they'd all made a big mistake in coming down from the trees 
+                        in the first place. And some said that even the trees had been a bad move, and that no one should ever have 
+                        left the oceans.</p>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a type="button" class="btn btn-primary" href="uc4.html">Open Application</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="uc5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel5" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel5">Use Case 5 Example</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-4"> <img src="images/EarthCARE_cut.jpg" style="height:auto" class="img-responsive"/> </div>
+                      <div class="col-md-8">
+                        <p>Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy 
+                        lies a small unregarded yellow sun. </p>
+                        <p>Orbiting this at a distance of roughly ninety-two million miles is an utterly insignificant little blue green 
+                        planet whose ape-descended life forms are so amazingly primitive that they still think digital watches are a 
+                        pretty neat idea. </p>
+                        <p>This planet has - or rather had - a problem, which was this: most of the people on it were unhappy for 
+                        pretty much of the time. Many solutions were suggested for this problem, but most of these were largely 
+                        concerned with the movements of small green pieces of paper, which is odd because on the whole it wasn't 
+                        the small green pieces of paper that were unhappy. 
+                        And so the problem remained; lots of the people were mean, and most of them were miserable, even the 
+                        ones with digital watches. </p>
+                        <p>Many were increasingly of the opinion that they'd all made a big mistake in coming down from the trees 
+                        in the first place. And some said that even the trees had been a bad move, and that no one should ever have 
+                        left the oceans.</p>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a type="button" class="btn btn-primary" href="uc5.html">Open Application</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="uc6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel6" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel6">Use Case 6 Example</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-4"> <img src="images/EarthCARE_cut.jpg" style="height:auto" class="img-responsive"/> </div>
+                      <div class="col-md-8">
+                        <p>Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy 
+                        lies a small unregarded yellow sun. </p>
+                        <p>Orbiting this at a distance of roughly ninety-two million miles is an utterly insignificant little blue green 
+                        planet whose ape-descended life forms are so amazingly primitive that they still think digital watches are a 
+                        pretty neat idea. </p>
+                        <p>This planet has - or rather had - a problem, which was this: most of the people on it were unhappy for 
+                        pretty much of the time. Many solutions were suggested for this problem, but most of these were largely 
+                        concerned with the movements of small green pieces of paper, which is odd because on the whole it wasn't 
+                        the small green pieces of paper that were unhappy. 
+                        And so the problem remained; lots of the people were mean, and most of them were miserable, even the 
+                        ones with digital watches. </p>
+                        <p>Many were increasingly of the opinion that they'd all made a big mistake in coming down from the trees 
+                        in the first place. And some said that even the trees had been a bad move, and that no one should ever have 
+                        left the oceans.</p>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a type="button" class="btn btn-primary" href="uc6.html">Open Application</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <!-- Modal -->
+            <div class="modal fade" id="uc7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel7" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel7">Use Case 7 Example</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-4"> <img src="images/EarthCARE_cut.jpg" style="height:auto" class="img-responsive"/> </div>
+                      <div class="col-md-8">
+                        <p>Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy 
+                        lies a small unregarded yellow sun. </p>
+                        <p>Orbiting this at a distance of roughly ninety-two million miles is an utterly insignificant little blue green 
+                        planet whose ape-descended life forms are so amazingly primitive that they still think digital watches are a 
+                        pretty neat idea. </p>
+                        <p>This planet has - or rather had - a problem, which was this: most of the people on it were unhappy for 
+                        pretty much of the time. Many solutions were suggested for this problem, but most of these were largely 
+                        concerned with the movements of small green pieces of paper, which is odd because on the whole it wasn't 
+                        the small green pieces of paper that were unhappy. 
+                        And so the problem remained; lots of the people were mean, and most of them were miserable, even the 
+                        ones with digital watches. </p>
+                        <p>Many were increasingly of the opinion that they'd all made a big mistake in coming down from the trees 
+                        in the first place. And some said that even the trees had been a bad move, and that no one should ever have 
+                        left the oceans.</p>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a type="button" class="btn btn-primary" href="uc7.html">Open Application</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="uc8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel8" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel8">Complete Functionality of Web Client</h4>
+                  </div>
+                  <div class="modal-body">
+                    <div class="row">
+                      <div class="col-md-4"> <img src="images/EarthCARE_cut.jpg" style="height:auto" class="img-responsive"/> </div>
+                      <div class="col-md-8">
+                        <p>Far out in the uncharted backwaters of the unfashionable end of the western spiral arm of the Galaxy 
+                        lies a small unregarded yellow sun. </p>
+                        <p>Orbiting this at a distance of roughly ninety-two million miles is an utterly insignificant little blue green 
+                        planet whose ape-descended life forms are so amazingly primitive that they still think digital watches are a 
+                        pretty neat idea. </p>
+                        <p>This planet has - or rather had - a problem, which was this: most of the people on it were unhappy for 
+                        pretty much of the time. Many solutions were suggested for this problem, but most of these were largely 
+                        concerned with the movements of small green pieces of paper, which is odd because on the whole it wasn't 
+                        the small green pieces of paper that were unhappy. 
+                        And so the problem remained; lots of the people were mean, and most of them were miserable, even the 
+                        ones with digital watches. </p>
+                        <p>Many were increasingly of the opinion that they'd all made a big mistake in coming down from the trees 
+                        in the first place. And some said that even the trees had been a bad move, and that no one should ever have 
+                        left the oceans.</p>
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    <a type="button" class="btn btn-primary" href="main.html">Open Application</a>
+                  </div>
+                </div>
+              </div>
+            </div>
         </div>
 
 
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/jquery.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
+        
 
 
-        <!-- build:js scripts/main.js -->
+
+        <!-- build:js scripts/menu.js -->
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 
-        <!-- build:js scripts/plugins.js -->
-        <script src="bower_components/sass-bootstrap/js/affix.js"></script>
-        <script src="bower_components/sass-bootstrap/js/alert.js"></script>
-        <script src="bower_components/sass-bootstrap/js/dropdown.js"></script>
-        <script src="bower_components/sass-bootstrap/js/tooltip.js"></script>
-        <script src="bower_components/sass-bootstrap/js/modal.js"></script>
-        <script src="bower_components/sass-bootstrap/js/transition.js"></script>
-        <script src="bower_components/sass-bootstrap/js/button.js"></script>
-        <script src="bower_components/sass-bootstrap/js/popover.js"></script>
-        <script src="bower_components/sass-bootstrap/js/carousel.js"></script>
-        <script src="bower_components/sass-bootstrap/js/scrollspy.js"></script>
-        <script src="bower_components/sass-bootstrap/js/collapse.js"></script>
-        <script src="bower_components/sass-bootstrap/js/tab.js"></script>
-        <!-- endbuild -->
 </body>
 </html>

@@ -12,7 +12,7 @@ $( document ).ready(function() {
 
 
 	$( ".col-md-6" ).click(function(evt) {
-	  $("#myModal").modal('show');
+	  $($(this).data("modal")).modal('show');
 	});
 
 

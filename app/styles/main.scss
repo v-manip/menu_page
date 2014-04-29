@@ -1,11 +1,8 @@
-$icon-font-path: "/bower_components/sass-bootstrap/fonts/";
-
-@import 'sass-bootstrap/lib/bootstrap';
 
 .col-md-6 {
-    height: 6em;
+    //height: 6em;
     border-radius: 9px;
-    padding: 9px;
+    //padding: 9px;
     cursor: pointer;
     cursor: hand;
 }
@@ -32,11 +29,26 @@ body {
 .app_logo {
     float: left;
     position: relative;
-    margin-right: 0.4em;
+    display: table; 
+    height: 6em;
+    //margin-right: 0.4em;
+}
+
+.app_logo div {
+    display: table-cell; 
+    vertical-align: middle; 
 }
 
 .app_text{
     margin-top: 0.1em;
+    display: table; 
+    height: 6em;
+    padding-left: 0.9em;
+}
+
+.app_text p {
+    display: table-cell; 
+    vertical-align: middle; 
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
