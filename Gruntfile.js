@@ -19,6 +19,16 @@ module.exports = function (grunt) {
             app: 'app',
             dist: 'dist'
         },
+        processhtml: {
+            build: {
+                process: true,
+                files: {
+                    'dist/index.html': ['<%= yeoman.app %>/index.html'],
+                    'dist/contact.html': ['<%= yeoman.app %>/contact.html'],
+                    'dist/about.html': ['<%= yeoman.app %>/about.html']
+                }
+            }
+        },
         watch: {
             compass: {
                 files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
@@ -328,14 +338,13 @@ module.exports = function (grunt) {
         'clean:dist',
         'useminPrepare',
         'concurrent:dist',
-        'autoprefixer',
         'concat',
         'cssmin',
         'uglify',
         'modernizr',
         'copy:dist',
-        'rev',
-        'usemin'
+        'usemin',
+        'processhtml'
     ]);
 
     grunt.registerTask('default', [
